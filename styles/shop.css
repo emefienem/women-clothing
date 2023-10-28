@@ -20,6 +20,10 @@ header{
     box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
 }
 
+header a{
+    text-decoration: none;
+}
+
 .nav-bar ul{
     display: flex;
     list-style: none;

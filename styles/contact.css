@@ -24,6 +24,10 @@ header{
     left: 0;
 }
 
+header a{
+    text-decoration: none;
+}
+
 
 .nav-bar ul{
     display: flex;

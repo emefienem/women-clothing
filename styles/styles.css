@@ -19,9 +19,10 @@ header{
     padding: 0 45px;
     align-items: center;
     box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
-    /* position: sticky;
-    top: 0;
-    left: 0; */
+}
+
+header a{
+    text-decoration: none;
 }
 
 .nav-bar ul{
@@ -128,13 +129,12 @@ header{
 
 .imageContainer {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    /* color: black;
-    padding-left: 10px; */
+    margin-left: 30px;
 }
 
 .image-card{
@@ -371,7 +371,6 @@ header{
 /* About section */
 .about-section-div{
     margin: 30px;
-    display: flex;
 }
 
 .about-section-div .about-divs{
@@ -609,19 +608,7 @@ hr{
 }
 
 /* Style for mobile phone */
-@media screen and (max-width: 768px) {
-    *, html{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box
-    }
-    
-    body{
-        background-color: #F5F5F5;
-        overflow-x: hidden;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    
+@media screen and (max-width: 768px) {    
     header{
         width: 100%;
         height: 80px;
@@ -691,15 +678,6 @@ hr{
         border-radius: 17px;
     }
     
-    .background-section {
-        background-image: url('images/Clothes1.jpg');
-        background-size: cover;
-        background-position: top center;
-        color: white;
-        text-align: center;
-        padding: 100px 0; 
-    }
-    
     /* Style for the content inside the background section */
     .second-div{
         color: white;
@@ -736,112 +714,21 @@ hr{
     }
 
     #feature{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: center;
     }
-    
+
     #feature .fe-box{
-        width: 120px;
-        text-align: center;
-        padding: 25px 15px;
-        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
-        border: 1px solid #cce7d0;
-        border-radius: 4px;
-        margin: 15px 0;
+        margin: 15px 15px;
     }
-    
-    #feature .fe-box:hover{
-        box-shadow: 10px 20px 54px rgba(70, 62, 221, 0.1);
-    }
-    
-    .fe-box img{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    
-    #feature .fe-box h6{
-        display: inline-block;
-        padding: 18px 8px;
-        font-weight: 700;
-        font-size: 17px;
-        line-height: 1px;
-        border-radius: 4px;
-        color: #088178;
-        background-color: #fddde4;
-    }
-    
-    #feature .fe-box:nth-child(2) h6{
-        background-color: #cdebbc;
-    }
-    
-    #feature .fe-box:nth-child(3) h6{
-        background-color: #d1e8f2;
-    }
-    
-    #feature .fe-box:nth-child(4) h6{
-        background-color: #f6dbf6;
-    }
-    
-    #feature .fe-box:nth-child(5) h6{
-        background-color: #fff2e5;
-    }
-    
-    #product1{
-        text-align: start;
-    }
-    
+
     #product1 .pro-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        justify-content: space-between;
-        padding-top: 20px;
+        justify-content: center;
     }
-    
+
     #product1 .pro{
-        width: 22%;
-        min-width: 250px;
-        padding: 10px 12px;
-        border: 1px solid #cce7d0;
-        border-radius: 25px;
-        cursor: pointer;
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
-        margin: 15px 0;
+        margin: 15px;
         transition: 0.2s ease;
-    }
-    
-    #product1 .pro:hover{
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
-    }
-    
-    #product1 .pro img{
-        width: 100%;
-        border-radius: 20px;
-    }
-    
-    #product1 .pro .des{
-        text-align: start;
-        padding: 10px 0;
-    }
-    
-    #product1 .pro .des h5{
-        padding-top: 7px;
-        color: #1a1a1a;
-        font-size: 14px;
-    }
-    
-    #product1 .pro .des i{
-        font-size: 12px;
-        color: rgb(243, 181, 25);
-    }
-    
-    #product1 .pro .des h4{
-        padding-top: 7px;
-        font-size: 15px;
-        font-weight: 700;
-        color: #088178;
+        position: relative;
     }
 
     .imageContainer {
@@ -851,8 +738,6 @@ hr{
         gap: 20px;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
-        /* color: black;
-        padding-left: 10px; */
     }
     
     .image-card{
@@ -1182,5 +1067,33 @@ hr{
 
     .footer{
         background-color: #000;
+    }
+
+    .about-section-div{
+        margin: 30px;
+    }
+
+    .about-section-div .about-divs{
+        display: block;
+        padding: 20px;
+    }
+
+    .about-section-div .about-divs .about-p{
+        line-height: 30px;
+        padding-left: 40px;
+    }
+
+    .about-section-div .about-divs .about-image{
+        width: 100%;
+    }
+    
+    .about-section-div .about-divs img{
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%);
+    }
+    
+    .about-section-div .about-divs img:hover{
+        filter: grayscale(0);
     }
 }

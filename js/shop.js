@@ -87,7 +87,7 @@ document.getElementById('root').innerHTML = categories.map((item) => {
         <div class='bottom'>
         <p>${title}</p>
         <h2>$${price}.00</h2>` +
-        "<button onclick='addToCart("+(i++)+")'>Add to cart</button>" +
+        "<button onclick='addToCart("+(i++)+")' class='addCartButton'>Add to cart</button>" +
         `</div>
         </div>`
         
@@ -112,16 +112,25 @@ function saveCartToLocalStorage() {
   
   // Call loadCartFromLocalStorage when the page loads
   window.addEventListener('load', loadCartFromLocalStorage);
-  
-  // Function to add an item to cart
-  function addToCart(a) {
-    shoppingCart.push({ ...categories[a] });
-    saveCartToLocalStorage(); // Save the updated cart to local storage
-    displayCart();
-  }
-  
-  
-  
+
+  const buttons = document.querySelectorAll('.addCartButton')
+//   buttons.forEach(button => {
+//     button.addEventListener('click', function () {
+//         if(button.textContent === 'Add to cart') {
+//             button.textContent = 'Added'
+//         } else{
+//             button.textContent = 'Add to cart'
+//         }
+//     })
+//   })
+
+// Function to add an item to cart
+    function addToCart(a) {
+      shoppingCart.push({ ...categories[a] });
+      saveCartToLocalStorage(); // Save the updated cart to local storage
+      displayCart();
+    }
+
   // Function to delete an item from the cart
   function delElement(a) {
     shoppingCart.splice(a, 1);
