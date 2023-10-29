@@ -32,7 +32,7 @@ If you'd like to contribute to the development of this shopping cart, please fol
 This project is licensed under Emefienem Michael License.
 
 ## Contact
-If you have any questions or need assistance, feel free to contact us at your@email.com.
+If you have any questions or need assistance, feel free to contact us at emefienemmichael@gmail.com.
 
 We hope you find this Women's Clothing Cart project useful!
 
