@@ -1,7 +1,38 @@
+const scrollTopButton = document.getElementById('scrollTopButton');
+// Show or hide the button based on the user scroll position
+window.onscroll = function() {
+  if(document.body.scrollTop > 10 || documentElement.scrollTop > 10) {
+    scrollTopButton.style.display = 'block';
+  } else{
+    scrollTopButton.style.display = 'none';
+  }
+}
+
+// Scroll to the top button when the button is clicked 
+scrollTopButton.addEventListener('click', function() {
+  // Determine the starting point
+  const startingY = window.scrollY;
+
+  // Calculate how much to scroll for each animation frame 
+  const scrollStep = (startingY) / (300 / 15)
+
+  // Define the animation function
+  const scrollAnimation = () => {
+    if (window.scrollY > 0) {
+      window.scrollTo(0, window.scrollY - scrollStep);
+      requestAnimationFrame(scrollAnimation);
+    }
+  }
+  scrollAnimation();
+  // document.body.scrollTop = 0; // For Safari;
+  // document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE, and Opera
+})
+
 // Home page 
 const images = document.querySelectorAll('.slide');
 const active = document.querySelector('.active');
 
+// Toggles the current header to gray 
 if(active) {
     active.style.color = 'gray'
 }

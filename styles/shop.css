@@ -479,7 +479,7 @@ hr{
     background-color: #000;
 }
 
-/* cartbox */
+/* Cartbox page */
 #cart{
     overflow: auto;
 }
@@ -575,6 +575,22 @@ button.normal{
     right: 10px;
     top: 0;
     font-size: 34px;
+    cursor: pointer;
+}
+
+/* Back to top button */
+.scroll-to-top{
+    /* display: none; */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50%;
     cursor: pointer;
 }
 

@@ -22,7 +22,7 @@
         </nav>
 
         <div class="users">
-            <a href="checkout.html"><li><i class="fa fa-cart-shopping"><sup id="raised">0</sup></i></li></a>
+            <a href="#cart" id="cartShowButton"><li><i class="fa fa-cart-shopping"><sup id="raised">0</sup></i></li></a>
         </div>
 
         <div class="mobile-menu">
@@ -56,6 +56,59 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.075959772998!2d3.1718786695106047!3d6.483151232123262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b81e32d338b1b%3A0xc7ad935a5c61e123!2sCele%20nica%20bus%20stops%20opposite%20CKC%20church!5e0!3m2!1sen!2sng!4v1693939981075!5m2!1sen!2sng" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
+    <section class="cartBox" id="confirmationModal">
+        <div id="cart">
+            <span class="close">&times;</span>
+            <h2>Cart Page</h2>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>REMOVE</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#"><i class="circle fa fa-times-circle"></i></a></td>
+                        <td><img src="images/burger3.jpg" alt=""></td>
+                        <td>Burger</td>
+                        <td>$75</td>
+                        <td><input type="number" value="1"></td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class=" circle fa fa-times-circle"></i></a></td>
+                        <td><img src="images/burger3.jpg" alt=""></td>
+                        <td>Burger</td>
+                        <td>$75</td>
+                        <td><input type="number" value="1"></td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="circle fa fa-times-circle"></i></a></td>
+                        <td><img src="images/burger3.jpg" alt=""></td>
+                        <td>Burger</td>
+                        <td>$75</td>
+                        <td><input type="number" value="1"></td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="circle fa fa-times-circle"></i></a></td>
+                        <td><img src="images/burger3.jpg" alt=""></td>
+                        <td>Burger</td>
+                        <td>$75</td>
+                        <td><input type="number" value="1"></td>
+                        <td>$75</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
     <section class="footer"> <br> <br>
         <div class="input-container">
@@ -121,6 +174,8 @@
         <p class="btm-credits">&copy 2023 ENROBEBYCHI All rights reserved Privacy Policy and Cookies | Terms & Conditions</p>
         <br>
     </section>
-    <script src="js/script.js"></script>
+
+    <div id="scrollTopButton" class="scroll-to-top">&#9650;</div>
+    <script src="js/shop.js"></script>
 </body>
 </html>
