@@ -378,6 +378,9 @@ hr{
         padding: 0 45px;
         align-items: center;
         box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
+        position: sticky;
+        top: 0;
+        left: 0;
     }
 
     .nav-bar ul {

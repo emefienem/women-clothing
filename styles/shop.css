@@ -18,6 +18,9 @@ header{
     padding: 0 45px;
     align-items: center;
     box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 header a{
@@ -103,7 +106,7 @@ header a{
 #root{
     width: 130%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 }
 
@@ -476,6 +479,105 @@ hr{
     background-color: #000;
 }
 
+/* cartbox */
+#cart{
+    overflow: auto;
+}
+
+#cart h2{
+    text-align: center;
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img{
+    width: 70px;
+}
+
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart table tbody td{
+    font-size: 13px;
+}
+
+.circle{
+    color: black;
+}
+
+button.normal{
+    background-color: #088178;
+    color: white;
+    border-style: none;
+    padding: 13px 20px 12px 20px;
+}
+
+.cartBox{
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 75%;
+    /* background: rgba(0, 0, 0, 0.7);*/
+    background: #fff;
+    z-index: 1;
+    overflow: auto;
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 34px;
+    cursor: pointer;
+}
+
 /* Style for mobile phone  */
 @media screen and (max-width: 768px) {
     *, html{
@@ -499,6 +601,9 @@ hr{
         padding: 0 45px;
         align-items: center;
         box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
+        position: sticky;
+        top: 0;
+        left: 0;
     }
 
     .nav-bar ul {
@@ -576,34 +681,6 @@ hr{
         grid-gap: 20px;
     }
     
-    .sidebar{
-        width: 90%;
-        border-radius: 5px;
-        background-color: #eee;
-        margin-top: 10px;
-        margin-left: 1px;
-        padding: 15px;
-        text-align: center;
-    }
-    
-    .head{
-        background-color: #EC4899;
-        border-radius: 3px;
-        height: 40px;
-        padding: 10px;
-        margin-bottom: 20px;
-        color: white;
-        display: flex;
-        align-items: center;
-    }
-    
-    .foot{
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0px;
-        padding: 10px 0px;
-        border-top: 1px solid #333;
-    }
     .box{
         display: flex;
         flex-direction: column;
