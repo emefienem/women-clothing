@@ -7,6 +7,7 @@ Welcome to the Women's Clothing Website repository. This project is dedicated to
 - Browse a diverse collection of women's clothing and accessories.
 - Add items to your shopping cart and proceed to checkout.
 - Stay updated with the latest fashion trends and promotions.
+- Users preference(Light and Dark mode).
 
 ## Getting Started
 
