@@ -6,6 +6,18 @@
     <title>EnrobeByChi Clothing</title>
     <link rel="stylesheet" href="styles/shop.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+    <script>
+        function Delete(e) {
+            let enrobeitems = [];
+            JSON.parse(localStorage.getItem('enrobeitems')).map(data => {
+                if(data.no === e.parentElement.parentElement.children[0].textContent) {
+                    enrobeitems.push(data);
+                }
+            });
+        localStorage.setItem ('enrobeitems', JSON.stringify(enrobeitems));
+        window.location.reload();
+    };
+    </script>
 </head>
 <body>
     <header>
@@ -18,9 +30,13 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html" class="active">Shop</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <div class="theme-btn">
+                    <i class="fa fa-adjust"></i>
+                </div>
             </ul>
         </nav>
 
+        <i class="search fa fa-search"></i>
         <div class="users">
             <a href="#carts" id="cartShowButton"><li><i class="shopping fa fa-cart-shopping"><sup id="raised">0</sup></i></li></a>
         </div>
@@ -30,6 +46,10 @@
         </div>
         
     </header> <br>
+    <div class="search-bar on">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <ul id="results"></ul>
+    </div>
     <p class="main-sectionp">EnrobeByChi Clothing for Women</p> <br> <br>
 
     <div class="container">

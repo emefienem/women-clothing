@@ -22,6 +22,7 @@ header{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 header a{
@@ -79,14 +80,14 @@ header a{
     margin: 0 20px;
     font-size: 20px;
     cursor: pointer;
-    color: blue;
+    color: #000;
 }
 
 .mobile-menu {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: blue;
+    color: #000;
 }
 
 .active{
@@ -472,6 +473,52 @@ button.normal{
     cursor: pointer;
 }
 
+/* light and dark mode button */
+.theme-btn{
+    position: fixed;
+    top: 14%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* box-shadow: 0 3px 15px rgba(0, 0, 0, .3); */
+    transition: all .1s ease-in-out;
+}
+
+.theme-btn:active{
+    transform: translateY(-5px);
+}
+
+.theme-btn i{
+    font-size: 1.4rem;
+    color: #808080;
+    pointer-events: none; 
+}
+
+.light-mode{
+    background-color: #000;
+}
+
+.search-bar{
+    display: flex;
+    place-items: center;
+}
+
+.search-bar input{
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    outline: none;
+    margin-left: 20px;
+    background-color: #000;
+    color: white;
+}
+
 @media screen and (max-width: 720px) {
     *, html{
         padding: 0;
@@ -496,6 +543,7 @@ button.normal{
         position: sticky;
         top: 0;
         left: 0;
+        z-index: 1;
     }
 
     .nav-bar ul {
@@ -538,7 +586,7 @@ button.normal{
         margin: 0 20px;
         font-size: 20px;
         cursor: pointer;
-        color: blue;
+        color: #000;
     }
 
     .logo{
@@ -837,4 +885,29 @@ button.normal{
         background-color: #000;
         margin-top: 700px;
     }
+
+        /* light and dark mode button */
+        .theme-btn{
+            position: fixed;
+            top: 14%;
+            right: 10%;
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+            transition: all .1s ease-in-out;
+        }
+    
+        .theme-btn:active{
+            transform: translateY(-5px);
+        }
+    
+        .theme-btn i{
+            font-size: 1.4rem;
+            pointer-events: none; 
+        }
 }

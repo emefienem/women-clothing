@@ -115,3 +115,32 @@ function showSlides1(n) {
   }
   slides1[slideIndex1-1].style.display = "block";
 }
+
+// Toggle theme
+const themebtn = document.querySelector('.theme-btn');
+const element = document.body;
+const savedTheme = localStorage.getItem('theme');
+
+if(savedTheme) element.classList.add(savedTheme);
+
+themebtn.addEventListener('click', function() {
+    // Toggle the 'light-mode' class on the body element
+    element.classList.toggle('light-mode');
+
+    // Check if the 'light mode' class is now present and save to theme peference 
+    if (element.classList.contains('light-mode')) localStorage.setItem('theme', 'light-mode');
+    else{
+        // Remove the theme preference if 'light-mode' is not present
+        localStorage.removeItem('theme');
+    }
+});
+
+// Toggle the search 
+const searchIcon = document.querySelector('.search');
+const searchBar = document.querySelector('.search-bar');
+const resultsList = document.getElementById('results');
+
+searchIcon.addEventListener('click', () => {
+    searchBar.classList.toggle('on');
+});
+
