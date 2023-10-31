@@ -677,8 +677,8 @@ button.normal{
     padding: 5px;
     outline: none;
     margin-left: 20px;
-    background-color: #000;
-    color: white;
+    background-color: #fff;
+    color: #000;
 }
 
 #search-bar::placeholder{
@@ -728,6 +728,12 @@ button.normal{
         background-color: white;
         box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
         z-index: 1;
+    }
+
+    .nav-bar ul i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-bar.active ul {
@@ -787,7 +793,7 @@ button.normal{
     }
     
     #root{
-        width: 90%;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;

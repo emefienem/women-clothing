@@ -34,6 +34,7 @@ header a{
     list-style: none;
 }
 
+
 .nav-bar ul li a{
     text-decoration: none;
     display: block;
@@ -767,8 +768,12 @@ hr{
     padding: 5px;
     outline: none;
     margin-left: 20px;
-    background-color: #000;
-    color: white;
+    background-color: #fff;
+    color: #000;
+}
+
+.on{
+    display: none;
 }
 
 /* Style for mobile phone */
@@ -797,6 +802,12 @@ hr{
         background-color: white;
         box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
         z-index: 1;
+    }
+
+    .nav-bar ul i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-bar.active ul {
