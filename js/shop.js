@@ -41,6 +41,7 @@ const iconShopping = document.getElementById('cartShowButton')
 
 iconShopping.addEventListener('click', function() {
     document.getElementById('confirmationModal').style.display = 'block'
+    nav.classList.remove('open');
 });
 cartCloseBtn.addEventListener('click', function() {
     document.getElementById('confirmationModal').style.display = 'none';
