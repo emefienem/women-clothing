@@ -31,28 +31,38 @@ scrollTopButton.addEventListener('click', function() {
 // Home page 
 const images = document.querySelectorAll('.slide');
 const active = document.querySelector('.active');
+const bar = document.getElementById('bar');
+const nav = document.getElementById('navbar');
+const close = document.getElementById('close');
+
+
+const activeDiv = document.querySelector('.active');
 
 // Toggles the current header to gray 
-if(active) {
+if(activeDiv) {
     active.style.color = 'gray'
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const navBar = document.querySelector('.nav-bar');
+// For mobile phones(Hamburger)
+if(bar) {
+    bar.addEventListener('click', () => {
+        nav.classList.add('open')
+    })
+}
 
-  mobileMenu.addEventListener('click', function () {
-      navBar.classList.toggle('active');
-  });
-});
+if(close) {
+    close.addEventListener('click', () => {
+        nav.classList.remove('open')
+    })
+}
 
-//  Changing Text automatically
 // Array of text to be displayed
 const textArray = [
   'NOSTAGLIC FEELING',
   'ATTRACTIVE DESIGNS',
 ];
 
+//  Changing Text automatically
 const textElement = document.getElementById('changing-text');
 let currentTextIndex = 0;
 
@@ -126,6 +136,7 @@ if(savedTheme) element.classList.add(savedTheme);
 themebtn.addEventListener('click', function() {
     // Toggle the 'light-mode' class on the body element
     element.classList.toggle('light-mode');
+    window.location.reload();
 
     // Check if the 'light mode' class is now present and save to theme peference 
     if (element.classList.contains('light-mode')) localStorage.setItem('theme', 'light-mode');

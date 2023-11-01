@@ -87,11 +87,12 @@ for(let i = 0; i < cartButton.length; i++) {
 }
 const cartSection = document.getElementById('cart');
 const cartBadge = document.querySelector('#raised');
-const cartBadges = document.querySelector('.numberBadges');
+const cartBadges = document.querySelector('#raised2');
 let no = 0;
 JSON.parse(localStorage.getItem('enrobeitems')).map(data => {
     no += data.no;
 })
+cartBadge.innerHTML = no;
 cartBadge.innerHTML = no;
 
 const cartTable = cartSection.querySelector('table');
@@ -118,14 +119,22 @@ if(JSON.parse(localStorage.getItem('enrobeitems')) === null) {
 cartTable.innerHTML = tableData;
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const navBar = document.querySelector('.nav-bar');
+const bar = document.getElementById('bar');
+const nav = document.getElementById('navbar');
+const close = document.getElementById('close');
 
-  mobileMenu.addEventListener('click', function () {
-      navBar.classList.toggle('active');
-  });
-});
+// For mobile phones(Hamburger)
+if(bar) {
+    bar.addEventListener('click', () => {
+        nav.classList.add('open')
+    })
+}
+
+if(close) {
+    close.addEventListener('click', () => {
+        nav.classList.remove('open')
+    })
+}
 
 // Toggle theme
 const themebtn = document.querySelector('.theme-btn');
@@ -137,6 +146,7 @@ if(savedTheme) element.classList.add(savedTheme);
 themebtn.addEventListener('click', function() {
     // Toggle the 'light-mode' class on the body element
     element.classList.toggle('light-mode');
+    window.location.reload();
 
     // Check if the 'light mode' class is now present and save to theme peference 
     if (element.classList.contains('light-mode')){
