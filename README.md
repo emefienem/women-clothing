@@ -16,7 +16,7 @@ To get started with this project, follow these steps:
 1. Clone this repository to your local machine:
 
    ```shell
-   git clone https://github.com/yourusername/women-clothing-website.git
+   git clone https://github.com/emefienem/women-clothing-website.git
 
      Set up the necessary development environment, including a web server.
 
